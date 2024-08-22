@@ -1,17 +1,20 @@
+import globals from "globals";
+import pluginJs from "@eslint/js";
 import jsdoc from 'eslint-plugin-jsdoc';
 
-const config = [
-    jsdoc.configs['flat/recommended-error'],
-    jsdoc.configs['flat/recommended'],
-    {
-        files: ['**/*.js'],
-        plugins: {
-            jsdoc,
-        },
-        rules: {
-            'jsdoc/require-description': 'warn'
-        }
+export default [
+  {
+    languageOptions: { globals: globals.browser }
+  },
+  pluginJs.configs.recommended,
+  jsdoc.configs['flat/recommended-error'],
+  {
+    files: ['**/*.js'],
+    plugins: {
+      jsdoc,
     },
+    rules: {
+      'jsdoc/require-description': 'error'
+    }
+  },
 ];
-
-export default config;
