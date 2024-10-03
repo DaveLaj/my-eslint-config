@@ -1,13 +1,18 @@
 # ESLint Configuration for JavaScript Projects with JSDoc
 
+
 This is a basic ESLint configuration for JavaScript projects with JSDoc.
 
+
 ## Do I hate TypeScript?
+
 
 No, in fact I think it is a needed improvement to the JavaScript ecosystem.
 Its just a bit more tedious to debug for me as I have to do a manual tracing of the error messages to find the line of code that is causing the error due to the transpiling step the TypeScript compiler does.
 
+
 ## Getting Started
+
 
 1. Install the ESLint
 
@@ -15,15 +20,17 @@ Its just a bit more tedious to debug for me as I have to do a manual tracing of 
     npm install -D eslint@latest
     ```
 
+
 2. Install the ESLint Plugin for JSDoc
 
     ```bash
     npm install -D eslint-plugin-jsdoc@latest
     ```
 
+
 3. Configure ESLint
 
-    ```json
+    ```js
     {
         files: ['**/*.js'],
         plugins: {
@@ -42,11 +49,13 @@ Its just a bit more tedious to debug for me as I have to do a manual tracing of 
     }, ...
     ```
 
+
 4. Initialize Your TypeScript Configuration
 
     ```bash
     npx tsc --init
     ```
+
 
 5. Configure Your TypeScript Configuration
 
@@ -59,6 +68,7 @@ Its just a bit more tedious to debug for me as I have to do a manual tracing of 
         }
     }
     ```
+
 
 6. Setup Checking during execution
 
