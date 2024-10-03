@@ -7,4 +7,3 @@
 export default async function randomNumber(lower, upper) {
     return Math.floor(Math.random() * (upper - lower) + lower);
 }
-
